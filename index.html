@@ -16,24 +16,20 @@
 
     </header>
 
-    <main>
+    <main class="container mx-auto mt-8">
+
+            <section class="p-4 m-4 bg-gray-100 rounded-xl">
+                <input
+                        type="text"
+                        placeholder="Search........"
+                        class="input input-bordered input-secondary w-full max-w-xs " id="searchfield" />
+
+                        <button onclick="handlesearch()" class="btn btn-success" >Search</button>
+            </section>
             <section>
 
-                <div id="phone-container">
-                    <div class="card bg-gray-100 w-96 shadow-xl">
-                        <figure>
-                          <img
-                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                            alt="Shoes" />
-                        </figure>
-                        <div class="card-body">
-                          <h2 class="card-title">Shoes!</h2>
-                          <p>If a dog chews shoes whose shoes does he choose?</p>
-                          <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
-                          </div>
-                        </div>
-                      </div>
+                <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 m-8 ">
+                    
                 </div>
             </section>
 
