@@ -15,6 +15,18 @@ const displayPhones = phones =>{
 
   phoneContainer.textContent = '';
 
+  const showAllContainer = document.getElementById('show-all-container')
+
+  console.log(phones.length)
+
+  if(phones.length>12) {
+    showAllContainer.classList.remove('hidden')
+  }else{
+    showAllContainer.classList.add('hidden')
+  }
+
+  phones = phones.slice(0,12)
+
   phones.forEach(phone =>{
 
 
@@ -43,9 +55,12 @@ const displayPhones = phones =>{
     phoneContainer.appendChild(phoneCard)
     
   })
+  toggleSpinner(false)
 }
 
 const handlesearch = () =>{
+
+  toggleSpinner(true)
   const searchfield = document.getElementById('searchfield')
   const searchtext = searchfield.value
   console.log(searchtext)
@@ -53,7 +68,18 @@ const handlesearch = () =>{
   loadPhone(searchtext)
 }
 
+const toggleSpinner  = (isLoading) =>{
+  const loadingSpinner = document.getElementById('loading-spinner')
 
+  if(isLoading){
+    loadingSpinner.classList.remove('hidden')
+  }
+  else{
+    loadingSpinner.classList.add('hidden')
+  }
+  
+
+}
 
 
 
